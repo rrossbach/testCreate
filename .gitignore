@@ -1,5 +1,6 @@
 .settings/
 .idea/
+out/
 bin/
 build/
 output/
