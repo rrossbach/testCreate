@@ -3,6 +3,7 @@ import java.awt.*;
 
 public class DrawPanel extends JPanel {
 
+    // adding comment to have something to commit and push in git
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
