@@ -63,6 +63,24 @@ public class Main {
 		 * 		3) correct the pixel's blue value (if it's less than 16, multiply it by 16;  otherwise set it 0
 		 * 
 		 */
+		meetingOne.setRed(0,0,0);
+		meetingOne.setRed(1,0,0);
+		meetingOne.setRed(2,0,0);
+
+		for (int x = 0; x < meetingOne.getWidth(); x++) {
+			for (int y = 0; y < meetingOne.getHeight(); y++) {
+				meetingOne.setRed(x, y, 0);
+				meetingOne.setGreen(x, y, 0);
+				int blueValue = meetingOne.getBlue(x, y);
+				if (blueValue >= 16) {
+					meetingOne.setBlue(x, y, 0);
+				} else {
+					blueValue = blueValue * 16;
+					meetingOne.setBlue(x, y, blueValue);
+				}
+			}
+		}
+
 		locationOne.setVisible(true);
 
 
